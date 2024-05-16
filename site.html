@@ -1,67 +1,124 @@
-html
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-<meta charset="UTF-8">
-<title>História da UEFA Champions League</title>
-<style>
-    body {
-        font-family: Arial, sans-serif;
-        margin: 0;
-        padding: 0;
-        background-color: #1a78a2;
-        color: #fff;
-        text-align: center;
-    }
-    h1 {
-        color: #fff;
-        margin-top: 20px;
-    }
-    h2 {
-        color: #fff;
-    }
-    p {
-        margin: 10px;
-    }
-    ul {
-        list-style-type: none;
-        padding: 0;
-    }
-    li {
-        margin-bottom: 10px;
-    }
-</style>
+    <meta charset="UTF-8">
+    <title>História das Competições de Clubes</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #000000;
+            color: #fff;
+            text-align: center;
+        }
+        h1, h2 {
+            margin-top: 20px;
+        }
+        h1 {
+            color: #fff;
+        }
+        h2 {
+            color: #fff;
+        }
+        p {
+            margin: 10px;
+        }
+        ul {
+            list-style-type: none;
+            padding: 0;
+        }
+        li {
+            margin-bottom: 10px;
+        }
+        .tabcontent {
+            display: none;
+        }
+    </style>
+    <script>
+        function openTab(tabName) {
+            var i;
+            var x = document.getElementsByClassName("tabcontent");
+            for (i = 0; i < x.length; i++) {
+                x[i].style.display = "none";
+            }
+            document.getElementById(tabName).style.display = "block";
+        }
+    </script>
 </head>
 <body>
 
-<h1>UEFA Champions League</h1>
-
-<img src="champions.jpg" alt="champions" style="display: block; margin: 0 auto;">
-
-<h2>Origem</h2>
-<p>A Champions League foi criada em 1955 ainda com o nome de Taça dos Clubes Campeões Europeus. Embora sempre tenha sido respaldada pela UEFA, a ideia da criação partiu dos jornalistas franceses Jacques Ferran e Gabriel Hanot, ambos do jornal L’Équipe. A primeira edição contou com os campeões nacionais da Bélgica,
- Dinamarca, Suécia, Itália, Espanha, França e Alemanha, além de outros nove clubes convidados, e acabou com o Real Madrid tornando-se campeão na final contra o Stade de Reims, da França.
-
-    O clube merengue ganhou não só a primeira edição como também as outras quatro seguintes, emendando o primeiro e único pentacampeonato consecutivo da história da competição. Outras equipes vieram a conquistar um tricampeonato de forma seguida: o Ajax (1971, 1972 e 1973); o Bayern de Munique (1974, 1975 e 1976) e mais uma vez o Real Madrid (2016, 2017 e 2018).</p>
+<div>
+    <h1>História das Competições de Clubes</h1>
+    <p>Bem-vindo ao um site que conta um pouco sobre a história das competições de clubes mais prestigiadas do mundo: UEFA Champions League, Copa Libertadores e Mundial de Clubes.</p>
+    <img src="fut.jpeg" alt="Competições de Clubes" class="intro-img">
+    <p>Para saber mais sobre cada competição, selecione uma das opções de navegação abaixo.</p>
+</div>
 
 
-<h2>Times Vencedores</h2>
-<ul>
-    <li>Real Madrid: 14 (1955/1956, 1956/1957, 1957/1958, 1958/1959, 1959/1960, 1965/1966, 1997/1998, 1999/2000, 2001/2002, 2013/2014, 2015/2016, 2016/2017,
-         2017/2018 e 2021/2022)</li>
-    <li>Milan: 7 (1962/1963, 1968/1969, 1988/1989, 1989/1990, 1993/1994, 2002/2003 e 2006/2007)</li>
-    <li>Bayern de Munique: 6 (1973/1974, 1974/1975, 1975/1976, 2000/2001, 2012/2013 e 2019/2020)</li>
-    <li>Liverpool: 6 (1976/1977, 1977/1978, 1980/1981, 1983/1984, 2004/2005 e 2018/2019)</li>
-    <li>Barcelona: 5 (1991/1992, 2005/2006, 2008/2009, 2010/2011 e 2014/2015)</li>
-    <li>Inter de Milão: 3 (1963/1964, 1964/1965 e 2009/2010)</li>
-    <li>Manchester United: 3 (1967/1968, 1998/1999 e 2007/2008)</li>
-    <li>Juventus: 2 (1984/1985 e 1995/1996)</li>
-    <li>Benfica: 2 (1960/1961 e 1961/1962)</li>
-    <li>Chelsea: 2 (2011/2012 e 2020/2021)</li>
-    <li>Manchester City: 1 (2022/2023)</li>
-    <li>Borussia Dortmund: 1 (1996/1997)</li>
-    <!-- Adicione mais times e anos conforme necessário -->
-</ul>
+<!-- Navegação entre abas -->
+<div>
+    <button onclick="openTab('champions')">UEFA Champions League</button>
+    <button onclick="openTab('libertadores')">Copa Libertadores</button>
+    <button onclick="openTab('mundial')">Mundial de Clubes</button>
+</div>
 
-</body>
-</html>
+<!-- UEFA Champions League -->
+<div id="champions" class="tabcontent">
+    <img src="champions.jpg" alt="UEFA Champions League" style="width: 300px; height: auto;">
+    <h2>Origem</h2>
+    <p>A Champions League foi criada em 1955 ainda com o nome de Taça dos Clubes Campeões Europeus. Embora sempre tenha sido respaldada pela UEFA, a ideia da criação partiu dos jornalistas franceses Jacques Ferran e Gabriel Hanot, ambos do jornal L’Équipe. A primeira edição contou com os campeões nacionais da Bélgica, Dinamarca, Suécia, Itália, Espanha, França e Alemanha, além de outros nove clubes convidados, e acabou com o Real Madrid tornando-se campeão na final contra o Stade de Reims, da França. O clube merengue ganhou não só a primeira edição como também as outras quatro seguintes, emendando o primeiro e único pentacampeonato consecutivo da história da competição. Outras equipes vieram a conquistar um tricampeonato de forma seguida: o Ajax (1971, 1972 e 1973); o Bayern de Munique (1974, 1975 e 1976) e mais uma vez o Real Madrid (2016, 2017 e 2018).</p>
+    <h2>Times Vencedores</h2>
+    <ul>
+        <li><strong>Real Madrid:</strong> 14 (1955/1956, 1956/1957, 1957/1958, 1958/1959, 1959/1960, 1965/1966, 1997/1998, 1999/2000, 2001/2002, 2013/2014, 2015/2016, 2016/2017, 2017/2018 e 2021/2022)</li>
+        <li><strong>Milan:</strong> 7 (1962/1963, 1968/1969, 1988/1989, 1989/1990, 1993/1994, 2002/2003 e 2006/2007)</li>
+        <li><strong>Bayern de Munique:</strong> 6 (1973/1974, 1974/1975, 1975/1976, 2000/2001, 2012/2013 e 2019/2020)</li>
+        <li><strong>Liverpool:</strong> 6 (1976/1977, 1977/1978, 1980/1981, 1983/1984, 2004/2005 e 2018/2019)</li>
+        <li><strong>Barcelona:</strong> 5 (1991/1992, 2005/2006, 2008/2009, 2010/2011 e 2014/2015)</li>
+        <li><strong>Inter de Milão:</strong> 3 (1963/1964, 1964/1965 e 2009/2010)</li>
+        <li><strong>Manchester United:</strong> 3 (1967/1968, 1998/1999 e 2007/2008)</li>
+        <li><strong>Juventus:</strong> 2 (1984/1985 e 1995/1996)</li>
+        <li><strong>Benfica:</strong> 2 (1960/1961 e 1961/1962)</li>
+        <li><strong>Chelsea:</strong> 2 (2011/2012 e 2020/2021)</li>
+        <li><strong>Manchester City:</strong> 1 (2022/2023)</li>
+        <li><strong>Borussia Dortmund:</strong> 1 (1996/1997)</li>
+    </ul>
+</div>
+
+<!-- Copa Libertadores -->
+<div id="libertadores" class="tabcontent">
+    <img src="libertadores.jpeg" alt="Conmebol Libertadores" style="width: 300px; height: auto;">
+    <h2>Origem</h2>
+    <p>A CSF convocou em 30 de julho de 1959 um novo congresso em Caracas, por conseguinte a sede da Federação de um futebol incipiente. O ponto mais importante da reunião: a criação da Copa dos Campeões. A ideia original do Chile contava agora com o fervente apoio da Argentina e do Brasil.
+
+        Finalmente, em 2 de agosto de 1959, aquela reunião extensa passou a ser histórica. Com 8 votos a favor e um contra (Uruguai), além da abstenção da Venezuela, a CSF resolveu, por maioria de votos, a criação da Copa dos Campeões (assim foi chamada). Logo depois da sessão do congresso entre 27 e 30 de agosto de 1959 presidido por Fermín Sorhueta (Uruguai) foi decidido que a competição se chamaria “Libertadores da América”, em homenagem aos heróis que cimentaram a criação das nações sul-americanas.</p>
+    <h2>Times Vencedores</h2>
+    <li><strong>Independiente-ARG: </strong> 7 (1964, 1965, 1972, 1973, 1974, 1975 e 1984)</li>
+    <li><strong>Boca Juniors-ARG: </strong> 6 (1977, 1978, 2000, 2001, 2003 e 2007)</li>
+    <li><strong>Penãrol-URU: </strong> 5 (1960, 1961, 1966, 1982 e 1987)</li>
+    <li><strong>River Plate-ARG: </strong> 4 (1986, 1996, 2015 e 2018)</li>
+    <li><strong>Nacional-URU: </strong> 3 (1971, 1980 e 1988)</li>
+    <li><strong>Flamengo-BRA:  </strong> 3 (1981, 2019 e 2022)</li>
+    <li><strong>Palmeiras-BRA: </strong> 3 (1999, 2020 e 2021)</li>
+    <li><strong>São Paulo-BRA: </strong> 3 (1992, 1993 e 2005)</li>
+    <li><strong>Santos-BRA:  </strong> 3 (1962 , 1963 e 2011)</li>
+    <li><strong>Corinthians-BRA: </strong> 1 (2012)</li>
+</div>
+
+<div id="mundial" class="tabcontent">
+    <img src="Mundial.jpeg" alt="Mundial de Clubes" style="width: 300px; height: auto;">
+    <h2>Origem</h2>
+    <p>O Mundial de Clubes começou, de acordo com a FIFA, em 1960. Na época, iniciou-se a Copa Intercontinental de Clubes, na qual disputavam, os campeões da Champions League e da Libertadores da América. O Real Madrid se sagrou o primeiro campeão da competição. O formato da competição, com apenas uma partida, durou até 2004.
+        Em 2005, a FIFA iniciou um novo modelo de competição, no qual campeões das competições continentais de diferentes continentes, além de um representante do país-sede, disputavam o troféu internacional. Por serem considerados mais fortes tecnicamente, os campeões da Champions League e da Libertadores passaram a entrar direto na semifinal. Desde então, os europeus nunca deixaram de disputar a decisão, enquanto os sul-americanos tropeçaram em poucas oportunidades.
+    <h2>Times Vencedores</h2>
+    <li><strong>Real Madrid:  </strong>8 (1960, 1998, 2002, 2014, 2016, 2017, 2018 e 2022)</li>
+    <li><strong>Milan: </strong>4 (1969, 1989, 1990 e 2007)</li>
+    <li><strong>Bayern de Munique: </strong> 4 (1976, 2001, 2013 e 2020)</li>
+    <li><strong>Boca Juniors: </strong> 3 (1977, 2000 e 2003)</li>
+    <li><strong>São Paulo:  </strong> 3 (1992, 1993 e 2005)</li>
+    <li><strong>Internazionale: </strong>  3 (1964, 1965 e 2010)</li>
+    <li><strong>Barcelona: </strong> 3 (2009, 2011 e 2015)</li>
+    <li><strong>Santos: 2  </strong> (1962 e 1963)</li>
+    <li><strong>Corinthians: </strong> 2 (2000 e 2012)</li>
+    <li><strong>Flamengo:  </strong>1 (1981)</li>
+    <li><strong>River Plate: </strong> 1 (1986)</li>
